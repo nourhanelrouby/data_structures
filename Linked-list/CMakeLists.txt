@@ -3,4 +3,8 @@ project(Linked_list)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Linked_list main.cpp)
+add_executable(
+        Linked_list
+        main.cpp
+        LinkedList.cpp
+)
