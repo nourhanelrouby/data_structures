@@ -21,3 +21,11 @@ data structures implementation
 - append
 - insertAfter
 - insertBefore
+
+# Stack
+- create
+- size
+- puds
+- display
+- search
+- pop
