@@ -1,18 +1,34 @@
 #include <iostream>
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+#include "Stack.h"
+using namespace std;
+
 
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
-
-    const auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
-
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+    int size,element;
+    Stack stack;
+    cout<<"Enter Number of elements you want to push in stack : "<<endl;
+    cin>>size;
+    for (int c=1;c<=size;c++) {
+        cout<<"Enter element you want to push in stack :"<<c<<endl;
+        cin>>element;
+        stack.push(element);
     }
 
+    stack.display();
+
+    cout<<"Deleted element is "<<stack.pop()<<endl;
+
+    stack.display();
+
+    cout<<"Size of stack is "<<stack.size()<<endl;
+
+    cout<<"Enter Element to search for : "<<endl;
+    cin>>element;
+    if (stack.search(element))cout<<"Element found : "<<element<<endl;
+    else cout<<"Element not found"<<endl;
+
+    cout<<"Stack Top : "<<stack.peek()<<endl;
+
     return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }
